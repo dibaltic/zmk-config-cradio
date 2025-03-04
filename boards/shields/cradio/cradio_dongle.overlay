@@ -1,20 +1,18 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/zmk/matrix_transform.h>
+#include <layouts/cuddlykeyboards/ferris.dtsi>
+
+&cuddlykeyboards_ferris_layout {
+    transform = <&default_transform>;
+};
 
 / {
     chosen {
-        zmk,kscan = &mock_kscan;
-        zmk,physical-layout = &cuddlykeyboards_ferris_layout;
+        zmk,kscan = &kscan0;
+        zmk,physical-layout = &cuddlykeyboards_ferris_layout
     };
 
-    mock_kscan: mock_kscan_0 {
-        compatible = "zmk,kscan-mock";
-        columns = <0>;
-        rows = <0>;
-        events = <0>;
-    };
-};
-
-  default_transform: keymap_transform_0 {
+    default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <34>;
         rows = <1>;
@@ -26,10 +24,29 @@
         >;
     };
 
-/ {
-    physical_layout0: cuddlykeyboards_ferris_layout {
-        compatible = "zmk,physical-layout";
-        display-name = "Default Layout";
-        transform = <&keymap_transform_0>;
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-direct";
+        wakeup-source;
+
+        input-gpios
+        = <&pro_micro  7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro  1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro  2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro  3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro  4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro  5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro  6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro  8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro  9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        ;
     };
+
 };
