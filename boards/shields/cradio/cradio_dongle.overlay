@@ -1,6 +1,6 @@
-#include <dt-bindings/zmk/matrix_transform.h>
-#include <dt-bindings/zmk/matrix_transform.h>
 #include <layouts/cuddlykeyboards/ferris.dtsi>
+#include <dt-bindings/zmk/matrix_transform.h>
+
 
 &cuddlykeyboards_ferris_layout {
     transform = <&default_transform>;
@@ -11,13 +11,13 @@
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &cuddlykeyboards_ferris_layout;
     };
-    mock_kscan: mock_kscan_0 {
+
+    mock_kscan: mock_kscan {
         compatible = "zmk,kscan-mock";
         columns = <0>;
         rows = <0>;
         events = <0>;
     };
-
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <34>;
@@ -29,30 +29,4 @@
                                    RC(0,15) RC(0,16)   RC(0,33) RC(0,32)
         >;
     };
-
-    kscan0: kscan {
-        compatible = "zmk,kscan-gpio-direct";
-        wakeup-source;
-
-        input-gpios
-        = <&pro_micro  7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        , <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        , <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        , <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        , <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        , <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        , <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        , <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        , <&pro_micro  1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        , <&pro_micro  2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        , <&pro_micro  3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        , <&pro_micro  4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        , <&pro_micro  5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        , <&pro_micro  6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        , <&pro_micro  8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        , <&pro_micro  9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        ;
-    };
-
 };
