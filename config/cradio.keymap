@@ -153,6 +153,12 @@
             bindings = <&to 5>;
             key-positions = <20 21 22>;
         };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <10 11>;
+            layers = <0>;
+        };
     };
 
     keymap {
@@ -170,9 +176,9 @@ HRML(C,  R,    S,     T)  &kp G        &kp M        HRMR(N,    E,         I,    
         sym {
             bindings = <
 &kp PRINTSCREEN  &kp LC(Z)     &kp LC(X)     &kp LA(F4)  &kp DOLLAR       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN  &kp SEMICOLON
-&kp LCTRL        &kp LEFT_GUI  &kp LEFT_ALT  &kp LC(F)   &kp PERCENT      &kp TILDE             &kp CARET              &kp QUESTION   &kp EXCLAMATION   &kp MINUS
-&kp TAB          &kp LG(L)     &kp LC(C)     &kp LC(V)   &kp AMPERSAND    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp FSLH       &kp BACKSLASH     &kp AT_SIGN
-                                             &trans      &trans           &kp RIGHT_SHIFT       &trans
+&kp LG(L)        &kp LG(LC(C))  &kp LC(V)  &kp LC(F)   &kp PERCENT      &kp TILDE             &kp CARET              &kp QUESTION   &kp EXCLAMATION   &kp MINUS
+&trans           &trans         &trans     &trans      &kp AMPERSAND    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp FSLH       &kp BACKSLASH     &kp AT_SIGN
+                                           &trans      &trans           &kp RIGHT_SHIFT       &trans
             >;
         };
 
@@ -208,7 +214,7 @@ HRML(C,  R,    S,     T)  &kp G        &kp M        HRMR(N,    E,         I,    
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &bt BT_PRV    &bt BT_NXT    &trans          &trans  &trans  &trans  &trans  &trans
 &bootloader   &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans
-                                          &bt BT_CLR    &trans          &trans  &trans
+                                          &bt BT_CLR    &to 0          &trans  &trans
             >;
         };
     };
