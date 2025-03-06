@@ -174,7 +174,7 @@
             bindings = <
 &kp LC(Y)  &kp LC(Z)      &kp LC(X)  &kp LA(F4)  &kp DOLLAR       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN  &kp SEMICOLON
 &kp LG(L)  &kp LG(LC(C))  &kp LC(V)  &kp LC(F)   &kp PERCENT      &kp TILDE             &kp CARET              &kp QUESTION   &kp EXCLAMATION   &kp MINUS
-&kp IT_PND   &kp IT_EUR   &trans     &kp HASH    &kp AMPERSAND    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp FSLH       &kp BACKSLASH     &kp AT_SIGN
+&trans     &trans   &trans     &kp HASH    &kp AMPERSAND    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp FSLH       &kp BACKSLASH     &kp AT_SIGN
                                      &trans      &trans           &kp RIGHT_SHIFT       &trans
             >;
         };
