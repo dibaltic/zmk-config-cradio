@@ -183,19 +183,19 @@
 
         num {
             bindings = <
-&kp C_BRI_UP       &none  &kp UP_ARROW    &none            &kp C_VOLUME_UP      &kp ASTRK      &kp N7        &kp N8        &kp N9        &kp PLUS
-&kp C_BRI_DEC                &kp LEFT_ARROW        &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp C_VOLUME_DOWN    &kp KP_DIVIDE  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
-&none                 &none                 &none           &none            &none                &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
-                                                            &to 0            &trans               &none     &trans
+&kp C_BRI_UP   &none           &kp UP_ARROW    &none            &kp C_VOLUME_UP      &kp ASTRK      &kp N7        &kp N8        &kp N9        &kp PLUS
+&kp C_BRI_DEC  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp C_VOLUME_DOWN    &kp KP_DIVIDE  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
+&none          &none           &none           &none            &none                &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
+                                               &none            &trans               &none          &trans
             >;
         };
 
         fun {
             bindings = <
 &kp F1          &kp F2         &kp F3       &kp F4        &kp F5     &kp F6      &kp F7           &kp F8     &kp F9         &kp F10
-&kp LEFT_SHIFT  &kp LEFT_ALT   &kp LCTRL    &kp LEFT_GUI  &kp F11    &kp F12     &kp RIGHT_GUI     &kp RCTRL  &kp RIGHT_ALT  &kp RSHIFT
+&kp LEFT_SHIFT  &kp LEFT_ALT   &kp LCTRL    &kp LEFT_GUI  &kp F11    &kp F12     &kp RIGHT_GUI    &kp RCTRL  &kp RIGHT_ALT  &kp RSHIFT
 &kp C_PAUSE     &kp PAGE_DOWN  &kp PAGE_UP  &kp HOME      &kp END    &kp INSERT  &kp PRINTSCREEN  &none      &none          &none
-                                            &to 0         &trans     &trans      &trans
+                                            &none         &trans     &trans      &trans
             >;
         };
 
