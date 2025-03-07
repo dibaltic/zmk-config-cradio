@@ -57,6 +57,7 @@
         fun {
             bindings = <&mo 3>;
             key-positions = <32 33>;
+            layers = <0 4>;
         };
 
         lbrac {
