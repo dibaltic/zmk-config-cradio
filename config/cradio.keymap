@@ -9,6 +9,7 @@
         esc {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
+            layers = <0 1 2 3 4>;
         };
 
         caps {
@@ -38,6 +39,7 @@
         ent {
             bindings = <&kp ENTER>;
             key-positions = <28 29>;
+            layers = <0 1 2 3 4>;
         };
 
         bspc {
