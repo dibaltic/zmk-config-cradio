@@ -132,6 +132,7 @@
         bluetooth {
             bindings = <&to 5>;
             key-positions = <20 21>;
+            layers = <1 2>;
         };
 
         tab {
