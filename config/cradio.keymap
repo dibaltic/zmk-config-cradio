@@ -7,6 +7,10 @@
 
 #include <dt-bindings/zmk/pointing.h>
 
+&lt {
+    tapping-term-ms = <200>;
+};
+
 / {
 
     behaviors {
@@ -174,10 +178,6 @@
         };
     };
 
-    &lt {
-    tapping-term-ms = <200>;
-        };
-    };
 
     keymap {
         compatible = "zmk,keymap";
