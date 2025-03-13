@@ -187,8 +187,8 @@
 
         sym {
             bindings = <
-&kp LC(Y)  &kp LC(Z)  &kp LC(X)  &kp LA(F4)  &kp DOLLAR       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN  &kp SEMICOLON
-&kp LG(L)  &kp LC(C)  &kp LC(V)  &kp LC(F)   &kp PERCENT      &kp TILDE             &kp CARET              &kp QUESTION   &kp EXCLAMATION   &kp MINUS
+&kp LA(F4)  &kp LC(X)  &kp LC(Z)  &kp LC(Y)  &kp DOLLAR       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN  &kp SEMICOLON
+&kp LG(L)   &kp LC(F)  &kp LC(C)  &kp LC(V)   &kp PERCENT      &kp TILDE             &kp CARET              &kp QUESTION   &kp EXCLAMATION   &kp MINUS
 &none      &none      &none      &kp HASH    &kp AMPERSAND    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp FSLH       &kp BACKSLASH     &kp AT_SIGN
                                  &trans      &trans           &kp RIGHT_SHIFT       &trans
             >;
