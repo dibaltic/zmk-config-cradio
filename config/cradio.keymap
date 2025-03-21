@@ -204,19 +204,19 @@
 
         num {
             bindings = <
-&kp PRINTSCREEN  &kp C_BRI_UP   &kp C_PLAY   &kp C_VOLUME_UP    &kp HOME    &kp ASTRK      &kp N7        &kp N8        &kp N9        &kp PLUS
-&kp INS          &kp C_BRI_DEC  &kp C_PAUSE  &kp C_VOLUME_DOWN  &kp END     &kp KP_DIVIDE  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
-&none            &none          &kp LA(LC(TAB))  &kp TAB              &none       &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
-                                             &none              &trans      &none          &trans
+&none  &kp C_BRI_UP   &kp C_PLAY       &kp C_VOLUME_UP    &kp PRINTSCREEN    &kp ASTRK      &kp N7        &kp N8        &kp N9        &kp PLUS
+&none  &kp C_BRI_DEC  &kp C_PAUSE      &kp C_VOLUME_DOWN  &kp INS            &kp KP_DIVIDE  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
+&none  &none          &kp LA(LC(TAB))  &kp TAB            &none              &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
+                                       &none              &trans             &none          &trans
             >;
         };
 
         nav {
             bindings = <
-&none  &none           &kp UP_ARROW    &none            &kp PAGE_UP      &none      &none           &mmv MOVE_UP    &none            &none
-&none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN    &mkp MB4   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
-&none  &none           &none           &none            &none            &mkp MB5   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT
-                                       &trans           &trans           &mkp LCLK  &mkp RCLK
+&kp HOME  &none           &kp UP_ARROW       &none             &kp PAGE_UP      &none      &none           &mmv MOVE_UP    &none            &none
+&kp END   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW   &kp PAGE_DOWN    &mkp MB4   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
+&none     &none           &kp C_AC_ZOOM_OUT  &kp C_AC_ZOOM_IN  &none            &mkp MB5   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT
+                                             &trans            &trans           &mkp LCLK  &mkp RCLK
             >;
         };
 
