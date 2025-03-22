@@ -45,18 +45,13 @@
     behaviors {
 
          tp_repeat_mo2: tp_repeat_mo2 {
-
          compatible = "zmk,behavior-hold-tap";
-
          label = "TP_REPEAT_MO2";
-
          #binding-cells = <2>;
-
          tapping-term-ms = <350>;
-
          bindings = <&mo 2>, <&key_repeat>;
-
-}; 
+       };
+};
 
 
     combos {
