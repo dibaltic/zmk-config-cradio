@@ -7,8 +7,11 @@
 
 #include <dt-bindings/zmk/pointing.h>
 
+#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
+#define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
+
 &lt {
-    tapping-term-ms = <500>;
+    tapping-term-ms = <350>;
 };
 
 / {
@@ -20,6 +23,24 @@
             delay-ms = <0>;                   // 0
         };
     };
+
+    behaviors {
+        ht: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <100>;
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
+&sk {
+    release-after-ms = <2000>;
+    quick-release;
+    /delete-property/ ignore-modifiers;
+};
 
     combos {
         compatible = "zmk,combos";
@@ -115,6 +136,7 @@
         };
 
         rpar {
+           
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <7 17>;
             layers = <0>;
@@ -127,6 +149,7 @@
         };
 
         quote {
+            require-prior-idle-ms = <200>
             bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <7 8>;
             layers = <0>;
@@ -169,13 +192,15 @@
         };
 
         lshift {
-            bindings = <&kp LEFT_SHIFT>;
+            require-prior-idle-ms = <200>
+            bindings = <&sk LEFT_SHIFT>;
             key-positions = <11 12>;
             layers = <0>;
         };
 
         rshift {
-            bindings = <&kp RIGHT_SHIFT>;
+            require-prior-idle-ms = <200>
+            bindings = <&sk RIGHT_SHIFT>;
             key-positions = <18 17>;
             layers = <0>;
         };
@@ -187,7 +212,7 @@
         base {
             bindings = <
 &kp W  &kp L  &kp Y  &kp P  &kp B          &kp Z        &kp F  &kp O      &kp U      &kp SQT
-&kp C  &kp R  &kp S  &kp T  &kp G          &kp M        &kp N  &kp E      &kp I      &kp A
+HRML(C,  R,   S,     T)  &kp G          &kp M       HRMR( N,   E,       I,     A)
 &kp Q  &kp J  &kp V  &kp D  &kp K          &kp X        &kp H  &kp SLASH  &kp COMMA  &kp PERIOD
                      &mo 1  &lt 3 SPACE    &key_repeat  &mo 2
             >;
