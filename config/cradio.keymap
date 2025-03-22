@@ -66,6 +66,17 @@
        };
 };
 
+    behaviors {
+         layer_enter: layer_enter {
+         compatible = "zmk,behavior-hold-tap";
+         label = "layer_enter";
+         flavor = "tap-preferred";
+         #binding-cells = <2>;
+         tapping-term-ms = <280>;
+         require-prior-idle-ms = <100>;
+         bindings = <&mo>, <&kp>;
+       };
+};
 
     combos {
         compatible = "zmk,combos";
@@ -98,12 +109,6 @@
             bindings = <&kp DEL>;
             key-positions = <8 9>;
             layers = <0>;
-        };
-
-        ent {
-            bindings = <&kp ENTER>;
-            key-positions = <28 29>;
-            layers = <0 2>;
         };
 
         bspc {
@@ -220,7 +225,7 @@
 &kp W  &kp L  &kp Y  &kp P  &kp B          &kp Z        &kp F  &kp O      &kp U      &kp SQT
 HRML(C,  R,   S,     T)  &kp G          &kp M       HRMR( N,   E,       I,     A)
 &kp Q  &kp J  &kp V  &kp D  &kp K          &kp X        &kp H  &kp SLASH  &kp COMMA  &kp PERIOD
-                     &sl 1  &lt 3 SPACE    &tp_repeat_mo 2 0  &magic_shift 4 LSHIFT
+                     &layer_enter 1 ENTER  &lt 3 SPACE    &tp_repeat_mo 2 0  &magic_shift 4 RSHIFT
             >;
         };
 
@@ -229,7 +234,7 @@ HRML(C,  R,   S,     T)  &kp G          &kp M       HRMR( N,   E,       I,     A
 &kp LA(F4)  &kp LC(X)  &kp LC(Z)  &kp LC(Y)  &kp DOLLAR       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN  &kp SEMICOLON
 &kp LG(L)   &kp LC(F)  &kp LC(C)  &kp LC(V)   &kp PERCENT      &kp TILDE             &kp CARET              &kp QUESTION   &kp EXCLAMATION   &kp MINUS
 &none      &none      &none      &kp HASH    &kp AMPERSAND    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp FSLH       &kp BACKSLASH     &kp AT_SIGN
-                                 &trans      &trans           &sk RIGHT_SHIFT       &trans
+                                 &trans      &trans           &trans       &sk RSHIFT
             >;
         };
 
@@ -238,7 +243,7 @@ HRML(C,  R,   S,     T)  &kp G          &kp M       HRMR( N,   E,       I,     A
 &none  &kp C_BRI_UP   &kp C_PLAY       &kp C_VOLUME_UP    &kp PRINTSCREEN    &kp ASTRK      &kp N7        &kp N8        &kp N9        &kp PLUS
 &none  &kp C_BRI_DEC  &kp C_PAUSE      &kp C_VOLUME_DOWN  &kp INS            &kp KP_DIVIDE  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
 &none  &none          &kp LA(LC(TAB))  &kp TAB            &none              &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
-                                       &none              &trans             &none          &trans
+                                       &none              &kp ENTER             &none          &trans
             >;
         };
 
