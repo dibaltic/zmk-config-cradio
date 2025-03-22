@@ -38,9 +38,25 @@
             tapping-term-ms = <300>;
             quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
-            bindings = <&kp>, <&kp>, <&mo>, <&key_repeat>;
+            bindings = <&kp>, <&kp>;
         };
     };
+
+    behaviors {
+
+         tp_repeat_mo2: tp_repeat_mo2 {
+
+         compatible = "zmk,behavior-hold-tap";
+
+         label = "TP_REPEAT_MO2";
+
+         #binding-cells = <2>;
+
+         tapping-term-ms = <350>;
+
+         bindings = <&mo 2>, <&key_repeat>;
+
+}; 
 
 
     combos {
@@ -94,11 +110,6 @@
             layers = <0>;
         };
 
-        fun {
-            bindings = <&mo 4>;
-            key-positions = <32 33>;
-            layers = <0 5>;
-        };
 
         lbrac {
             bindings = <&kp LEFT_BRACKET>;
