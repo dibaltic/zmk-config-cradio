@@ -11,7 +11,7 @@
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
 &lt {
-    tapping-term-ms = <350>;
+    tapping-term-ms = <280>;
 };
 
 &sk {
@@ -43,12 +43,12 @@
     };
 
     behaviors {
-
          tp_repeat_mo2: tp_repeat_mo2 {
          compatible = "zmk,behavior-hold-tap";
          label = "TP_REPEAT_MO2";
+         flavor = "tap-preferred";
          #binding-cells = <2>;
-         tapping-term-ms = <350>;
+         tapping-term-ms = <280>;
          bindings = <&mo 2>, <&key_repeat>;
        };
 };
