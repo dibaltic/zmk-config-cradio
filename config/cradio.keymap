@@ -24,7 +24,7 @@
 
     behaviors {
         mmv {
-            acceleration-exponent = <2>;      // 1
+            acceleration-exponent = <1>;      // 1
             time-to-max-speed-ms = <40>;    // 40
             delay-ms = <0>;                   // 0
         };
@@ -150,7 +150,7 @@
         };
 
         quote {
-            require-prior-idle-ms = <200>
+            require-prior-idle-ms = <200>;
             bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <7 8>;
             layers = <0>;
@@ -193,14 +193,14 @@
         };
 
         lshift {
-            require-prior-idle-ms = <200>
+            require-prior-idle-ms = <100>;
             bindings = <&sk LEFT_SHIFT>;
             key-positions = <11 12>;
             layers = <0>;
         };
 
         rshift {
-            require-prior-idle-ms = <200>
+            require-prior-idle-ms = <100>;
             bindings = <&sk RIGHT_SHIFT>;
             key-positions = <18 17>;
             layers = <0>;
