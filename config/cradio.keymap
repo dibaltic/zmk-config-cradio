@@ -66,17 +66,6 @@
        };
 };
 
-    behaviors {
-         layer_sticky: layer_sticky {
-         compatible = "zmk,behavior-hold-tap";
-         label = "layer_sticky";
-         flavor = "tap-preferred";
-         #binding-cells = <2>;
-         tapping-term-ms = <280>;
-         require-prior-idle-ms = <100>;
-         bindings = <&mo>, <&sk>;
-       };
-};
 
     combos {
         compatible = "zmk,combos";
@@ -231,7 +220,7 @@
 &kp W  &kp L  &kp Y  &kp P  &kp B          &kp Z        &kp F  &kp O      &kp U      &kp SQT
 HRML(C,  R,   S,     T)  &kp G          &kp M       HRMR( N,   E,       I,     A)
 &kp Q  &kp J  &kp V  &kp D  &kp K          &kp X        &kp H  &kp SLASH  &kp COMMA  &kp PERIOD
-                     &layer_sticky 1 1  &lt 3 SPACE    &tp_repeat_mo 2 0  &magic_shift 4 LSHIFT
+                     &sl 1  &lt 3 SPACE    &tp_repeat_mo 2 0  &magic_shift 4 LSHIFT
             >;
         };
 
