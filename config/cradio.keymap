@@ -219,7 +219,7 @@
 &kp W  &kp L  &kp Y  &kp P  &kp B          &kp Z        &kp F  &kp O      &kp U      &kp SQT
 HRML(C,  R,   S,     T)  &kp G          &kp M       HRMR( N,   E,       I,     A)
 &kp Q  &kp J  &kp V  &kp D  &kp K          &kp X        &kp H  &kp SLASH  &kp COMMA  &kp PERIOD
-                     &sl 1  &lt 3 SPACE    &tp_repeat_mo 2 0  &magic_shift 4 0
+                     &sl 1  &lt 3 SPACE    &tp_repeat_mo 2 0  &magic_shift 4 LSHIFT
             >;
         };
 
