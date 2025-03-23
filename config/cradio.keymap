@@ -253,7 +253,7 @@ HRML(C,  R,   S,     T)  &kp G          &kp M       HRMR( N,   E,       I,     A
             bindings = <
 &kp LA(F4)  &kp LC(X)  &kp LC(Z)  &kp LC(Y)  &kp LA(LC(TAB))           &kp ASTRK   &kp DOLLAR      &kp AT_SIGN    &kp AMPERSAND     &kp SEMICOLON
 &kp LG(L)   &kp LC(F)  &kp LC(C)  &kp LC(V)  &kp TAB                  &kp TILDE   &kp PERCENT     &kp QUESTION   &kp EXCLAMATION   &kp MINUS
-&kp LC(F4)  &kp LC(LS(TAB))  &kp LC(TAB)     &LC(T)  &LC(N)           &kp CARET   &kp HASH        &kp FSLH       &kp BACKSLASH     &kp PIPE
+&kp LC(F4)  &kp LC(LS(TAB))  &kp LC(TAB)     &kp LC(T)  &kp LC(N)     &kp CARET   &kp HASH        &kp FSLH       &kp BACKSLASH     &kp PIPE
                                  &trans      &trans                    &trans      &sk RSHIFT
             >;
         };
