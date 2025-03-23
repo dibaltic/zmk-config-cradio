@@ -225,7 +225,7 @@
         tab {
             require-prior-idle-ms = <125>;
             bindings = <&kp TAB>;
-            key-positions = <10 11>;
+            key-positions = <11 12>;
             layers = <0>;
         };
 
@@ -253,7 +253,7 @@ HRML(C,  R,   S,     T)  &kp G          &kp M       HRMR( N,   E,       I,     A
             bindings = <
 &kp LA(F4)  &kp LC(X)  &kp LC(Z)  &kp LC(Y)  &kp DOLLAR       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN  &kp SEMICOLON
 &kp LG(L)   &kp LC(F)  &kp LC(C)  &kp LC(V)   &kp PERCENT      &kp TILDE             &kp CARET              &kp QUESTION   &kp EXCLAMATION   &kp MINUS
-&none      &none      &none      &kp HASH    &kp AMPERSAND    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp FSLH       &kp BACKSLASH     &kp AT_SIGN
+&kp LC(F4)  &kp LC(LS(TAB))  &kp LC(TAB)      &kp HASH    &kp AMPERSAND    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp FSLH       &kp BACKSLASH     &kp AT_SIGN
                                  &trans      &trans           &trans       &sk RSHIFT
             >;
         };
@@ -269,10 +269,10 @@ HRML(C,  R,   S,     T)  &kp G          &kp M       HRMR( N,   E,       I,     A
 
         nav {
             bindings = <
-&kp HOME  &none           &kp UP_ARROW       &none             &kp PAGE_UP      &none      &none           &mmv MOVE_UP    &none            &none
-&kp END   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW   &kp PAGE_DOWN    &mkp MB4   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
-&none     &none           &none  &none  &none            &mkp MB5   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT
-                                             &trans            &trans           &mkp LCLK  &mkp RCLK
+&kp HOME  &none           &kp UP_ARROW       &none             &kp PAGE_UP      &mkp MB3      &msc SCRL_DOWN    &mmv MOVE_UP      &msc SCRL_UP       &none
+&kp END   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW   &kp PAGE_DOWN    &mkp MB4      &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_RIGHT    &none
+&none     &none           &none              &none             &none            &mkp MB5      &msc SCRL_LEFT    &none             &msc SCRL_RIGHT    &none
+                                             &trans            &trans           &mkp LCLK     &mkp RCLK
             >;
         };
 
